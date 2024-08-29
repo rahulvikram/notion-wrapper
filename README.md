@@ -35,18 +35,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This personal project is meant to be a developer tool, aimed at mass running functions, storing their runtimes as CSV data, aggregating it, and using a GUI to create a graph of this data. This tool is pip installable, making it extremely easy for Python developers to use. 
  
 
 ### Built With
 
 * [Python](https://www.python.org/)
-* [Matplotlib](https://matplotlib.org/)
-* [Pandas](https://pandas.pydata.org/)
-* [Tkinter](https://docs.python.org/3/library/tkinter.html)
-* [Poetry](https://python-poetry.org/)
-* [PyPi](https://pypi.org/)
-
  
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -58,50 +51,13 @@ pip
   ```
 
 ### Installation
-Simply pip install the module
-   ```sh
-   pip install runmetricsvisualizer
-  ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-```py
-from runmetricsvisualizer.runmetrics import RunMetrics
-```
 
-### RunMetrics.run()
-Runs a specified function desired amount of times, outputs runtime data to CSV file as provided by user. Uses *args and **kwargs for function parameters.\
-```py
-RunMetrics.run(function, output_csv_file, *function_args, function_run_count, **function_kwargs)
-```
-Example
-```py
-# our function
-def do_something(num, iterations):
-    for x in range(num):
-        sum([x**4 for x in range(iterations)])
-
-# (num = 100, iterations = 1000) Will generate 50 datapoints
-RunMetrics.run(do_something, 'data/test.csv', 100, 1000, count=50)
-```
-
-### RunMetrics.plot()
-Opens a Tkinter-generated GUI window for customizing graph settings: datapoint colors, chart style, background theme, and chart title. 
-```py
-RunMetrics.plot(CSVfile_to_plot_from)
-```
-Example
-```py
-RunMetrics.plot('data/test.csv')
-# opens the following GUI menu
-```
-![GUI](src/img/gui.png)
 
 <!-- ROADMAP -->
 ## Roadmap
-
-See the [open issues](https://github.com/rahulvikram/RunMetrics-Visualizer/issues) for a full list of proposed features (and known issues).
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -116,7 +72,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
 
 <!-- LICENSE -->
 ## License
